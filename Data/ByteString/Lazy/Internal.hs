@@ -146,11 +146,6 @@ instance IsList ByteString where
   fromList = packBytes
   toList   = unpackBytes
 
--- | Beware: 'fromString' truncates multi-byte characters to octets.
--- e.g. "枯朶に烏のとまりけり秋の暮" becomes �6k�nh~�Q��n�
-instance IsString ByteString where
-    fromString = packChars
-
 instance Data ByteString where
   gfoldl f z txt = z packBytes `f` unpackBytes txt
   toConstr _     = packConstr
