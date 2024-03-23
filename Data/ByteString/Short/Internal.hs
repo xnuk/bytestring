@@ -330,11 +330,6 @@ instance GHC.Exts.IsList ShortByteString where
   fromListN = (ShortByteString .) . GHC.Exts.fromListN
   toList    = GHC.Exts.toList . unShortByteString
 
--- | Beware: 'fromString' truncates multi-byte characters to octets.
--- e.g. "枯朶に烏のとまりけり秋の暮" becomes �6k�nh~�Q��n�
-instance IsString ShortByteString where
-    fromString = packChars
-
 ------------------------------------------------------------------------
 -- Simple operations
 
