@@ -1,4 +1,4 @@
-Name:                bytestring
+Name:                bytestring-noisstring
 Version:             0.13.0.0
 Synopsis:            Fast, compact, strict and lazy byte strings with a list interface
 Description:
